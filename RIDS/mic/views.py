@@ -15,12 +15,13 @@ def location(request):
         'players': [Caleb, Anastasia],
         'witness_questions': WitnessForm(),
         'places': places,
-        'answer': ''
+        'answer': '',
+        'interview': 'false'
     }
 
     if request.method == 'POST':
         context['witness_questions'] = WitnessForm(request.POST)
-
+        context['interview'] = 'true'
         if context['witness_questions'].is_valid():
             question = context['witness_questions'].cleaned_data['You']
             context['answer'] = Martha.answer(question)

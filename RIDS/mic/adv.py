@@ -3,16 +3,16 @@ from mic.player import Player, witness_questions
 # Declare all the rooms
 
 places = {
-    'Denver':  Room("Sheriff Headquarters",
+    'Denver':  Room("Denver: Sheriff Headquarters",
                      "In front of you is a busy little town, people in the streets walk to and fro going about their business.", [Martha], []),
 
-    'Louisville':    Room("Train Station", "Ahead, you see a train pulled into the station, passengers around you hurry to get ready for the long journey in front of them.", [], []),
+    'Louisville':    Room("Louisville: The Train Station", "Ahead, you see a train pulled into the station, passengers around you hurry to get ready for the long journey in front of them.", [], []),
 
-    'Idaho Springs': Room("Indian Tribe", "A friendly Indian community is in view, Indian mothers pick vegetables from the garden while young Indian warriors practice hunting techniques.", [], []),
+    'Idaho Springs': Room("Idaho Springs: The Indian Tribe", "A friendly Indian community is in view, Indian mothers pick vegetables from the garden while young Indian warriors practice hunting techniques.", [], []),
 
-    'Cripple Creek':   Room("The Gold Rush", "You haven't heard? There is gold in these waters! You see the creek packed with fortune hunters.", [], []),
+    'Cripple Creek':   Room("Cripple Creek: The Gold Rush", "You haven't heard? There is gold in these waters! You see the creek packed with fortune hunters.", [], []),
 
-    'Fort Morgan': Room("Military Fort", "As you arrive, a massive military fort is in sight. Soldiers take part in military drills.", [], []),
+    'Fort Morgan': Room("Fort Morgan: The Military Fort", "As you arrive, a massive military fort is in sight. Soldiers take part in military drills.", [], []),
 }
 
 
