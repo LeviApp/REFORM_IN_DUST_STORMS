@@ -3,22 +3,34 @@
     {% block content %}
         <div>
 
-            <form method='post'>
-                {% csrf_token %}
-                {{witness_questions}}
-                <button type='submit'>Ask</button>
-            </form>
 
-            <h1>{{answer}}</h1>
-            <h1>
-                {{ players.0.name }}
-            </h1>
 
-            faith = <input type="text">
+            {% if interview == 'true' %}
+                <form method='post'>
+                    {% csrf_token %}
+                    {{witness_questions}}
+                    <button type='submit'>Ask</button>
+                </form>
 
-            {% if faith.value == 'faith' %}
-                <p> You moved a mountain!</p>
+                <h1>{{answer}}</h1>
+                <h1>
+                    {{ players.0.name }}
+                </h1>
+            {% elif interview == 'false' %}
+                <h2>Welcome to {{players.0.place.name}}</h2>
+                <h3>{{players.0.place.description}}</h3>
+                <form method='post'>
+                    {% csrf_token %}
+                    <button type='submit'>Explore Town</button>
+                </form>
+
             {% endif %}
+
+
+
 
         </div>
     {% endblock content %}
+
+
+
