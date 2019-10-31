@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-    {% for player in players %}
-    <h1>{{player.name}}</h1>
-    {% endfor %}
 
-    </div>
-</body>
-</html>
+    {% extends 'mic/base.html' %}
+    {% block content %}
+        <div>
+            {% for player in players %}
+                {% if player.name == 'Caleb Beckett' %}
+                    <h1>{{player.name}}</h1>
+                {% endif %}
+            {% endfor %}
+
+            faith = <input type="text">
+
+            {% if faith.value == 'faith' %}
+                <p> You moved a mountain!</p>
+            {% endif %}
+
+        </div>
+    {% endblock content %}
