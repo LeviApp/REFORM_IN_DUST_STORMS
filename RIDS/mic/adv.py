@@ -60,6 +60,7 @@ location['Fort Morgan'].sw_to = location['Cripple Creek']
 
 
 Caleb = Player("Deputy", "Caleb Beckett", {}, {}, witness_questions, location['Denver'])
+Anastasia = Player("Deputy", "Anastasia Cooper", {}, {}, witness_questions, location['Denver'])
 
 # print(Caleb)
 
