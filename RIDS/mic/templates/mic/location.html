@@ -2,11 +2,17 @@
     {% extends 'mic/base.html' %}
     {% block content %}
         <div>
-            {% for player in players %}
-                {% if player.name == 'Caleb Beckett' %}
-                    <h1>{{player.name}}</h1>
-                {% endif %}
-            {% endfor %}
+
+            <form method='post'>
+                {% csrf_token %}
+                {{witness_questions}}
+                <button type='submit'>Ask</button>
+            </form>
+
+            <h1>{{answer}}</h1>
+            <h1>
+                {{ players.0.name }}
+            </h1>
 
             faith = <input type="text">
 
