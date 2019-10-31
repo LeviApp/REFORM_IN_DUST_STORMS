@@ -2,7 +2,7 @@ from mic.room import Room, Responses, Witness, martha_responses, Martha
 from mic.player import Player, witness_questions
 # Declare all the rooms
 
-location = {
+places = {
     'Denver':  Room("Sheriff Headquarters",
                      "In front of you is a busy little town, people in the streets walk to and fro going about their business.", [Martha], []),
 
@@ -18,26 +18,26 @@ location = {
 
 # Link rooms together
 
-location['Denver'].n_to = location['Louisville']
-location['Denver'].s_to = location['Cripple Creek']
-location['Denver'].w_to = location['Idaho Springs']
-location['Denver'].e_to = location['Fort Morgan']
+places['Denver'].n_to = places['Louisville']
+places['Denver'].s_to = places['Cripple Creek']
+places['Denver'].w_to = places['Idaho Springs']
+places['Denver'].e_to = places['Fort Morgan']
 
-location['Louisville'].s_to = location['Denver']
-location['Louisville'].sw_to = location['Idaho Springs']
-location['Louisville'].se_to = location['Fort Morgan']
+places['Louisville'].s_to = places['Denver']
+places['Louisville'].sw_to = places['Idaho Springs']
+places['Louisville'].se_to = places['Fort Morgan']
 
-location['Idaho Springs'].ne_to = location['Louisville']
-location['Idaho Springs'].e_to = location['Denver']
-location['Idaho Springs'].se_to = location['Cripple Creek']
+places['Idaho Springs'].ne_to = places['Louisville']
+places['Idaho Springs'].e_to = places['Denver']
+places['Idaho Springs'].se_to = places['Cripple Creek']
 
-location['Cripple Creek'].ne_to = location['Fort Morgan']
-location['Cripple Creek'].n_to = location['Denver']
-location['Cripple Creek'].nw_to = location['Idaho Springs']
+places['Cripple Creek'].ne_to = places['Fort Morgan']
+places['Cripple Creek'].n_to = places['Denver']
+places['Cripple Creek'].nw_to = places['Idaho Springs']
 
-location['Fort Morgan'].w_to = location['Denver']
-location['Fort Morgan'].nw_to = location['Louisville']
-location['Fort Morgan'].sw_to = location['Cripple Creek']
+places['Fort Morgan'].w_to = places['Denver']
+places['Fort Morgan'].nw_to = places['Louisville']
+places['Fort Morgan'].sw_to = places['Cripple Creek']
 
 
 #
@@ -59,8 +59,8 @@ location['Fort Morgan'].sw_to = location['Cripple Creek']
 # If the user enters "q", quit the game.
 
 
-Caleb = Player("Deputy", "Caleb Beckett", {}, {}, witness_questions, location['Denver'])
-Anastasia = Player("Deputy", "Anastasia Cooper", {}, {}, witness_questions, location['Denver'])
+Caleb = Player("Deputy", "Caleb Beckett", {}, {}, witness_questions, places['Denver'])
+Anastasia = Player("Deputy", "Anastasia Cooper", {}, {}, witness_questions, places['Denver'])
 
 # print(Caleb)
 

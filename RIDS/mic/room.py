@@ -25,7 +25,7 @@ class Witness:
         self.location = location
         self.responses = responses
     def answer(self,question):
-        print(f'{self.name}: {getattr(self.responses,question)}')
+        return f'{self.name}: {getattr(self.responses,question)}'
 
 
     
