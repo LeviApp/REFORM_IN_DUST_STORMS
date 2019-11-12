@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from mic.adv import Caleb, Anastasia, places
-from mic.room import Room, Responses, Witness, martha_responses, Martha
+from mic.adv import Caleb, Anastasia, cities
+from mic.city import City, Responses, Witness, martha_responses, Martha
 from mic.player import Player, witness_questions
 # Create your views here.
 from mic.forms import WitnessForm
 from django import forms
+import keyboard
+
 
 
 def home(request):
@@ -14,14 +16,17 @@ def location(request):
     context = {
         'players': [Caleb, Anastasia],
         'witness_questions': WitnessForm(),
-        'places': places,
+        'cities': cities,
         'answer': '',
-        'interview': 'false'
+        'visit': 'entrance'
     }
+
+    if keyboard.is_pressed('a'):
+        print('a is PRESSED!')
 
     if request.method == 'POST':
         context['witness_questions'] = WitnessForm(request.POST)
-        context['interview'] = 'true'
+        context['visit'] = 'witness'
         if context['witness_questions'].is_valid():
             question = context['witness_questions'].cleaned_data['You']
             context['answer'] = Martha.answer(question)
