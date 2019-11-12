@@ -5,7 +5,7 @@
 
 
 
-            {% if interview == 'true' %}
+            {% if visit == 'witness' %}
                 <form method='post'>
                     {% csrf_token %}
                     {{witness_questions}}
@@ -16,9 +16,13 @@
                 <h1>
                     {{ players.0.name }}
                 </h1>
-            {% elif interview == 'false' %}
-                <h2>Welcome to {{players.0.place.name}}</h2>
-                <h3>{{players.0.place.description}}</h3>
+
+            {% elif visit == 'city' %}
+                <h2>{{players.0.city.description}}</h2>
+
+            {% elif visit == 'entrance' %}
+                <h2>Welcome to {{players.0.city.name}}</h2>
+                <h3>{{players.0.city.description}}</h3>
                 <form method='post'>
                     {% csrf_token %}
                     <button type='submit'>Explore Town</button>

@@ -41,9 +41,16 @@ class Clue:
         self.description = description
         self.location = location
 
-class Room:
-    def __init__(self, name, description, witnesses, clues):
+class City:
+    def __init__(self, name, description, places):
         self.name = name
         self.description = description
-        self.witnesses = witnesses
-        self.clues = clues
+        self.places = places
+
+class Place:
+    def __init__(self, city, name, description, witness, clue):
+        self.city = city
+        self.name = name
+        self.description = description
+        self.witness = witness
+        self.clue = clue
