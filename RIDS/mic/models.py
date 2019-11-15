@@ -3,12 +3,13 @@ from django.db import models
 # Create your models here.
 
 class Player(models.Model):
-    rank = models.CharField(max_length=40)
-    name = models.CharField(max_length=40)
+    rank = models.CharField(max_length=50, default="----")
+    name = models.CharField(max_length=50, default="----")
     description = models.TextField()
-    place = models.TextField()
-    weapon = models.TextField()
-    goodbye = models.TextField()
+    question_suspect = models.CharField(max_length=50, default="----")
+    question_place = models.CharField(max_length=50, default="----")
+    question_weapon = models.CharField(max_length=50, default="----")
+    goodbye = models.CharField(max_length=50, default="----")
     place_id = models.IntegerField()
     city_id = models.IntegerField()
     days_left = models.IntegerField()
@@ -19,35 +20,35 @@ class Player(models.Model):
         return self.name
 
 class Criminal(models.Model):
-    name = models.CharField(max_length=40)
-    gender = models.CharField(max_length=40)
-    race = models.CharField(max_length=40)
-    height = models.CharField(max_length=40)
-    age = models.CharField(max_length=40)
-    weight = models.CharField(max_length=40)
-    hair_color = models.CharField(max_length=40)
-    face_feature = models.CharField(max_length=40)
-    unique_feature = models.CharField(max_length=40)
-    crime_place = models.CharField(max_length=40)
-    weapon = models.CharField(max_length=40)
+    name = models.CharField(max_length=50, default="----")
+    gender = models.CharField(max_length=50, default="----")
+    race = models.CharField(max_length=50, default="----")
+    height = models.CharField(max_length=50, default="----")
+    age = models.CharField(max_length=50, default="----")
+    weight = models.CharField(max_length=50, default="----")
+    hair_color = models.CharField(max_length=50, default="----")
+    face_feature = models.CharField(max_length=50, default="----")
+    unique_feature = models.CharField(max_length=50, default="----")
+    crime_place = models.CharField(max_length=50, default="----")
+    weapon = models.CharField(max_length=50, default="----")
 
     def __str__(self):
         return self.name
 
 class Case(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
-    case_name = models.CharField(max_length=40)
-    name = models.CharField(max_length=40)
-    gender = models.CharField(max_length=40)
-    race = models.CharField(max_length=40)
-    height = models.CharField(max_length=40)
-    age = models.CharField(max_length=40)
-    weight = models.CharField(max_length=40)
-    hair_color = models.CharField(max_length=40)
-    face_feature = models.CharField(max_length=40)
-    unique_feature = models.CharField(max_length=40)
-    crime_place = models.CharField(max_length=40)
-    weapon = models.CharField(max_length=40)
+    case_name = models.CharField(max_length=50, default="----")
+    name = models.CharField(max_length=50, default="----")
+    gender = models.CharField(max_length=50, default="----")
+    race = models.CharField(max_length=50, default="----")
+    height = models.CharField(max_length=50, default="----")
+    age = models.CharField(max_length=50, default="----")
+    weight = models.CharField(max_length=50, default="----")
+    hair_color = models.CharField(max_length=50, default="----")
+    face_feature = models.CharField(max_length=50, default="----")
+    unique_feature = models.CharField(max_length=50, default="----")
+    crime_place = models.CharField(max_length=50, default="----")
+    weapon = models.CharField(max_length=50, default="----")
     solved = models.BooleanField()
 
     def __str__(self):
@@ -56,7 +57,7 @@ class Case(models.Model):
 
 
 class City(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(max_length=50, default="----")
     description = models.TextField()
     travel_time = models.IntegerField()
 
@@ -64,7 +65,7 @@ class City(models.Model):
         return self.name
 
 class Place(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(max_length=50, default="----")
     description = models.TextField()
     city = models.ForeignKey(City, on_delete=models.CASCADE)
 
@@ -72,7 +73,7 @@ class Place(models.Model):
         return self.name
 
 class Witness(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(max_length=50, default="----")
     description = models.TextField()
     place = models.ForeignKey(Place, on_delete=models.CASCADE)
 
@@ -80,7 +81,7 @@ class Witness(models.Model):
         return self.name
 
 class Clue(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(max_length=50, default="----")
     description = models.TextField()
     place = models.ForeignKey(Place, on_delete=models.CASCADE)
 
