@@ -1,22 +1,30 @@
 from django.shortcuts import render
-from mic.adv import Caleb, Anastasia, cities
-from mic.city import City, Responses, Witness, martha_responses, Martha
-from mic.player import Player, witness_questions
 # Create your views here.
 from mic.forms import WitnessForm
 from django import forms
 import keyboard
-
+from mic.models import Player, Criminal, City, Place, Witness, Responses, Clue, Case
 
 
 def home(request):
     return render(request, 'mic/home.html')
 
 def location(request):
+    player = Player.objects.all()
+
+    if keyboard.is_pressed('a'):
+        print('a is PRESSED!')
+    
+    city = City.objects.filter(id=player[0].city_id)
+    place = Place.objects.filter(id=player[0].place_id)
+    witness = Witness.objects.filter(place_id=place[0].id)
+
     context = {
-        'players': [Caleb, Anastasia],
+        'player': player,
         'witness_questions': WitnessForm(),
-        'cities': cities,
+        'city': city,
+        'place': place,
+        'witness': witness,
         'answer': '',
         'visit': 'entrance'
     }
