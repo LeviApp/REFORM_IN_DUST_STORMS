@@ -14,15 +14,20 @@
 
                 <h1>{{answer}}</h1>
                 <h1>
-                    {{ players.0.name }}
+                    {{ player.0.name }}
                 </h1>
 
             {% elif visit == 'city' %}
-                <h2>{{players.0.city.description}}</h2>
+                <h2>{{city.0.name}}</h2>
 
             {% elif visit == 'entrance' %}
-                <h2>Welcome to {{players.0.city.name}}</h2>
-                <h3>{{players.0.city.description}}</h3>
+                <h2>Welcome to {{city.0.name}}</h2>
+                <h3>{{city.0.description}}</h3>
+                <h4>{{place.0.name}}</h4>
+                <h4>{{place.0.description}}</h4>
+                <h4>{{witness.0.name}}</h4>
+                <h4>{{witness.0.description}}</h4>
+
                 <form method='post'>
                     {% csrf_token %}
                     <button type='submit'>Explore Town</button>
