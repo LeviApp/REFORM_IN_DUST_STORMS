@@ -11,3 +11,8 @@ class PlayerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Player
         fields = ('__all__')
+
+class CriminalSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Criminal
+        fields = ('__all__')

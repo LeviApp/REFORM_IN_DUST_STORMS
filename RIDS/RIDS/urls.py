@@ -21,5 +21,5 @@ urlpatterns = [
     path('mic/', include('mic.urls')),
 
     # REST APIS
-    path('mic/api/', include('mic.api.urls', 'cities-api')),
+    path('mic/api/', include('mic.api.urls', 'apis')),
 ]

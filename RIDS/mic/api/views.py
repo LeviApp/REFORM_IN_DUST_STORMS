@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from mic.models import Player, Criminal, City, Place, Witness, Responses, Clue, Case
-from mic.api.serializers import CitySerializer, PlayerSerializer
+from mic.api.serializers import CitySerializer, PlayerSerializer, CriminalSerializer
 
 @api_view(['GET',])
 def cities_api(request):
@@ -23,4 +23,15 @@ def players_api(request):
 
     if request.method == 'GET':
         serializer = PlayerSerializer(players, many=True)
+        return Response(serializer.data)
+
+@api_view(['GET',])
+def criminals_api(request):
+    try:
+        criminals = Criminal.objects.all()
+    except Criminal.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = CriminalSerializer(criminals, many=True)
         return Response(serializer.data)
