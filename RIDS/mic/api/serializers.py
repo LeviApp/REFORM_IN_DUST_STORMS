@@ -36,3 +36,8 @@ class ResponseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Responses
         fields = ('__all__')
+
+class ClueSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Clue
+        fields = ('__all__')
