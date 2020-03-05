@@ -31,3 +31,8 @@ class WitnessSerializer(serializers.ModelSerializer):
     class Meta:
         model = Witness
         fields = ('__all__')
+
+class ResponseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Responses
+        fields = ('__all__')
