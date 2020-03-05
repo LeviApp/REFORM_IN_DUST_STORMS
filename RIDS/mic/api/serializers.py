@@ -26,3 +26,8 @@ class PlaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Place
         fields = ('__all__')
+
+class WitnessSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Witness
+        fields = ('__all__')
