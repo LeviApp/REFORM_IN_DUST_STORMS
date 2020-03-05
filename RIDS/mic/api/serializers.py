@@ -21,3 +21,8 @@ class CaseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Case
         fields = ('__all__')
+
+class PlaceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Place
+        fields = ('__all__')

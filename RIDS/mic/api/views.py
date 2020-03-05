@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from mic.models import Player, Criminal, City, Place, Witness, Responses, Clue, Case
-from mic.api.serializers import CitySerializer, PlayerSerializer, CriminalSerializer, CaseSerializer
+from mic.api.serializers import CitySerializer, PlayerSerializer, CriminalSerializer, CaseSerializer, PlaceSerializer
 
 @api_view(['GET',])
 def cities_api(request):
@@ -45,4 +45,15 @@ def cases_api(request):
 
     if request.method == 'GET':
         serializer = CaseSerializer(cases, many=True)
+        return Response(serializer.data)
+
+@api_view(['GET',])
+def places_api(request):
+    try:
+        places = Place.objects.all()
+    except Place.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = PlaceSerializer(places, many=True)
         return Response(serializer.data)
