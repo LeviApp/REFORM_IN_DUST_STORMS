@@ -1,11 +1,8 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework import serializers
 
-from .models import Company
+from mic.models import City
 
-class CompanySerializer(ModelSerializer):
+class CitySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Company
-        fields = (
-            'id', 'name', 'description', 'website', 'street_line_1', 'street_line_2',
-            'city', 'state', 'zipcode'
-        )
+        model = City
+        fields = ('__all__')

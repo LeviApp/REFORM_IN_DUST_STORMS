@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+import mic.api.urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mic/', include('mic.urls')),
 
+    # REST APIS
+    path('mic/api/', include('mic.api.urls', 'cities-api')),
 ]
