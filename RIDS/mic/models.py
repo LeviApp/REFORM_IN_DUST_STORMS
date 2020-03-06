@@ -12,9 +12,6 @@ class Player(models.Model):
     goodbye = models.CharField(max_length=50, default="----")
     place_id = models.IntegerField()
     city_id = models.IntegerField()
-    days_left = models.IntegerField()
-    evidence = models.IntegerField()
-    warrant = models.BooleanField()
 
     def __str__(self):
         return self.name
@@ -38,6 +35,10 @@ class Criminal(models.Model):
 class Case(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     case_name = models.CharField(max_length=50, default="----")
+    days_left = models.IntegerField()
+    evidence = models.IntegerField()
+    signatures = models.IntegerField()
+    warrant = models.BooleanField()
     name = models.CharField(max_length=50, default="----")
     gender = models.CharField(max_length=50, default="----")
     race = models.CharField(max_length=50, default="----")
@@ -49,6 +50,7 @@ class Case(models.Model):
     unique_feature = models.CharField(max_length=50, default="----")
     crime_place = models.CharField(max_length=50, default="----")
     weapon = models.CharField(max_length=50, default="----")
+    notebook = models.TextField()
     solved = models.BooleanField()
 
     def __str__(self):

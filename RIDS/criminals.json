@@ -1,0 +1,19 @@
+[
+{
+    "model": "mic.criminal",
+    "pk": 1,
+    "fields": {
+        "name": "Dakota Turner",
+        "gender": "Male",
+        "race": "Indian",
+        "height": "Tall",
+        "age": "Old",
+        "weight": "Thin",
+        "hair_color": "Black",
+        "face_feature": "Large Eyebrows",
+        "unique_feature": "Limp",
+        "crime_place": "Bridge",
+        "weapon": "Hammer"
+    }
+}
+]
