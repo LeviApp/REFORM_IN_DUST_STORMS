@@ -1,1 +1,1 @@
-web: gunicorn reforminduststorms.wsgi
+web: gunicorn REFORM_IN_DUST_STORMS.wsgi --log-file -
