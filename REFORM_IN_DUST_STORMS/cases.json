@@ -1,0 +1,27 @@
+[
+    {
+        "model": "murder_in_color.case",
+        "pk": 1,
+        "fields": {
+            "player": 1,
+            "case_name": "Ignition",
+            "days_left": 14,
+            "evidence": 0,
+            "signatures": 0,
+            "warrant": false,
+            "name": "----",
+            "gender": "----",
+            "race": "----",
+            "height": "----",
+            "age": "----",
+            "weight": "----",
+            "hair_color": "----",
+            "face_feature": "----",
+            "unique_feature": "----",
+            "crime_place": "----",
+            "weapon": "----",
+            "notebook": "Case Notes",
+            "solved": false
+        }
+    }
+    ]

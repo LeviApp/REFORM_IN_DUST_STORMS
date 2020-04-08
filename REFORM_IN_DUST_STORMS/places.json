@@ -1,0 +1,273 @@
+[
+    {
+        "model": "murder_in_color.place",
+        "pk": 1,
+        "fields": {
+            "name": "Headquarters",
+            "description": "This is the head office of Marshall Caleb Beckett. A jail is in the back. You hear the snores of a prisoner sleeping on a cot. Maps are on the wall behind the Marshall's desk. A hat is laying on the desk. A gun case is in the corner.",
+            "city": 1
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 2,
+        "fields": {
+            "name": "Bank",
+            "description": "The bank is strategically placed next to Headquarters. Employees count money behind a tall counter, in the background is a large black curtain. Sounds of change engulf the room. A small boy dumps his bag of coins for savings. Two windows are placed on either side of the central door.",
+            "city": 1
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 3,
+        "fields": {
+            "name": "Restaurant",
+            "description": "You notice the fragrance of baked fish and salsa coming from the restaurant. Smells of freshly brewed coffee also invade your nose. You see a server with a large tray of drinks in her hand. Round tables are all around. Customers sit and wait for their food.",
+            "city": 1
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 4,
+        "fields": {
+            "name": "Hotel",
+            "description": "The ding of a service bell rings in the hotel. Travelers wait in line for help. Room keys are hanging on nails behind the service desk. A pile of travel bags sit next to the door. You notice a couple grab their bags and head towards a wagon outside.",
+            "city": 1
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 5,
+        "fields": {
+            "name": "Saloon",
+            "description": "Drunks stumble from the saloon. One hits the ground face first. Swinging doors open as people enter and exit. Benches are outside with a barrel next to the door. You see a bar with bottles set on shelves. You notice a round table with men around playing poker.",
+            "city": 1
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 6,
+        "fields": {
+            "name": "Barber",
+            "description": "You see a striped pole outside the barber shop. A tolling church bell rings in the distance. You see a man with a beard. Shaving cream covers it. You hear the snipping of hair being cut. You see a man sitting on a chair waiting. He is reading a newspaper.",
+            "city": 1
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 7,
+        "fields": {
+            "name": "Cab",
+            "description": "You come to the front of the train. A huge light is in the middle of it. Train horns blare as workers prepare for departure. Smoke billows out of the chimney. You see maps scattered on the driver's desk for the journey ahead.",
+            "city": 2
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 8,
+        "fields": {
+            "name": "Blacksmith",
+            "description": "You hear the loud bangs of a blacksmith hammering and reshaping a customer's tool. You watch as sparks fly upward. There is a stable in the back. Horses stomp around making the place dusty. Horse shoes lay on a rack to be sold.",
+            "city": 2
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 9,
+        "fields": {
+            "name": "Depot",
+            "description": "You notice a man checking train tickets at the depot. You hear dogs barking with excitement as they, along with other family members, give a proper farewell to the travelers. Passengers hurry along with bags in their hands. Children play while they wait to board.",
+            "city": 2
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 10,
+        "fields": {
+            "name": "Store",
+            "description": "You see a building dedicated to refreshing the weary travelers. A couple sit at a table outside. An umbrella covers it. You see red pinstriped curtains lining a window. Candy, and other travel items are being displayed in the window. The door opens from time to time by anxious visitors.",
+            "city": 2
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 11,
+        "fields": {
+            "name": "Courthouse",
+            "description": "You notice a row of pillars outside a courthouse. Steps come to a large central door where you see a sheriff leading a prisoner up the stairs. The prisoner struggles against his restraints. A statue of George Washington sits on the upper platform.",
+            "city": 2
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 12,
+        "fields": {
+            "name": "Caboose",
+            "description": "You come to the the caboose. You see windows on the sides. Railroad workers pound at the inner joints of the train, securing the bolts in place. You notice iron rails on the back. A lantern is on board. A welded ladder leads to the train's roof.",
+            "city": 2
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 13,
+        "fields": {
+            "name": "Bonfire",
+            "description": "You are surrounded by tipis. You hear the sound of beating drums as Indians, both old and young, dance around a bonfire. You see an extravagant feather headdress on the ground.  Elders warm themselves by the fire. You appreciate the passionate yells as they pray to their ancestors for guidance.",
+            "city": 3
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 14,
+        "fields": {
+            "name": "Garden",
+            "description": "You see a space dedicated to crops. You hear the wind whistling through the corn, and smell \u2029the juicy onions. You notice a group of Indian ladies gardening, picking vegetables and putting\u2029 them in large baskets. Some ladies have baby slings, taking care of their young.",
+            "city": 3
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 15,
+        "fields": {
+            "name": "Tipi",
+            "description": "You smell the aroma of herbs coming from this tent. You see billows of smoke coming from\u2029a pot on a small fire. A sick Indian is laying on a bed. A lantern is by his side. Covering the inside of the tipi\u2029 are colorful hand-crafted tapestries.",
+            "city": 3
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 16,
+        "fields": {
+            "name": "Lake",
+            "description": "On a lake\u2019s shore, you see piles of rocks. Several canoes are on the water. Indian elders teach their children how to fish. Other elders are showing young braves how to shoot rifles, which were traded by travelers. A section of beautiful sunflowers shine in the sunlight.",
+            "city": 3
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 17,
+        "fields": {
+            "name": "Forest",
+            "description": "You stand on the edge of a forest. You can see many kinds of trees,\r\nfrom the mighty oak to the pine. You find a group of horses tied to a tree. Young warriors shoot arrows with their bows, trying to hit trees they have defined as targets.",
+            "city": 3
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 18,
+        "fields": {
+            "name": "Spring",
+            "description": "You come across sacred springs of water that spill onto the ground. You view an Indian as he fills his canteen. Around the springs are rings of stones. You feel small being surrounded by giant pine trees. You hear the songs of birds around you.",
+            "city": 3
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 19,
+        "fields": {
+            "name": "Creek",
+            "description": "You notice many people flocked on the banks of a creek.\u2029The water is clear enough to see rocks on the bottom.\u2029 You find gold pans scattered on the coasts of the stream. All around, \u2029there are patches of cacti and yucca plants.",
+            "city": 4
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 20,
+        "fields": {
+            "name": "Wagons",
+            "description": "A group of wagons is stopped. A man and his wife get ready for lunch, cooking on a campfire. You smell freshly\u2029baked beans, chicken, and rice. The sound of a team of horses rings, as they are being cared for. A lantern sits on the back of a wagon.",
+            "city": 4
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 21,
+        "fields": {
+            "name": "Cabin",
+            "description": "You come to a little wood cabin. A pile of sticks is at the side of the house. There is an axe stuck in a stump for chopping wood.\u2029You see smoke billowing out of the chimney. You notice a man working hard building a fence.",
+            "city": 4
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 22,
+        "fields": {
+            "name": "Meadow",
+            "description": "You see a meadow up ahead. It comes alive with color as you notice a field of flowers, from sunflowers to lilies. Bees buzz as they\u2029go from flower to flower. The sounds of kids playing in the green grass ring in your ears.",
+            "city": 4
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 23,
+        "fields": {
+            "name": "Pond",
+            "description": "You stumble upon a small pond. You hear croaks of frogs that live there. You smell seaweed and other minerals in the water. You notice a trail of compacted plants created by years of migrating animals. You find sun-bleached antlers laying on the ground.",
+            "city": 4
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 24,
+        "fields": {
+            "name": "Mine",
+            "description": "You notice a large mine with stalagmites at its entrance. You hear the\u2029 fluttering of bats as men pick away at the rock for their prize gold nugget. You see a cart and railroad tracks nearby as you\u2029 feel a strong breeze coming from the mine's entrance.",
+            "city": 4
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 25,
+        "fields": {
+            "name": "Outpost",
+            "description": "You approach a hot campfire. Soldiers, sitting on stumps and rocks, huddle around it. You smell the fragrance of roasting coffee. You are engulfed in a plum of smoke. Other soldiers are on high alert keeping guard. They have rifles on their shoulders, ready for action at any moment.",
+            "city": 5
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 26,
+        "fields": {
+            "name": "Barracks",
+            "description": "You come across the main housing for soldiers. Lines of small wood buildings are in view. You hear the sounds of troopers walking about with their families. A church bell rings in the distance. Dust flies up from the ground from the busyness around you.",
+            "city": 5
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 27,
+        "fields": {
+            "name": "Bridge",
+            "description": "You come across a beautiful \u2029bridge. You see people around enjoying the scenery of both \u2029plant life and animal life.\u2029The bridge is made from smooth stones, and built\u2029 over a slow-moving river. You notice a lantern\u2029 resting on the side of the bridge.",
+            "city": 5
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 28,
+        "fields": {
+            "name": "Command",
+            "description": "You come to the command office of the army captain. You hear a choir of crickets singing nearby. You notice a compass on a desk. Maps are hung on the wall behind it. An officer's coat and hat are next to the door.",
+            "city": 5
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 29,
+        "fields": {
+            "name": "Corral",
+            "description": "You see a fenced area with a group of horses inside. The sound of neighing surrounds you. A soldier on a horse riding away. There is a trough with a man pouring water into it, while horses drink from it. A gate with a padlock keeps this area secure.",
+            "city": 5
+        }
+    },
+    {
+        "model": "murder_in_color.place",
+        "pk": 30,
+        "fields": {
+            "name": "Range",
+            "description": "You see men lined up to shoot targets. Their low-powered rifles rest on sandbags for better aim. You hear shots ringing out as the red targets move with every hit. You smell the distinct odor of gunpowder. You notice a man at a nearby table cleaning his gun.",
+            "city": 5
+        }
+    }
+    ]
+    

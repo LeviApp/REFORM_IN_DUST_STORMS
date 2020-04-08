@@ -25,7 +25,7 @@ SECRET_KEY = 't!jbch#7*lziu*#028n1)a&2nm)x2bg3_3!zx9g9pvs73$j(!h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['reforminduststorms.herokuapp.com']
+ALLOWED_HOSTS = ['reforminduststorms.herokuapp.com', 'localhost:8000']
 
 
 # Application definition
@@ -50,8 +50,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'REFORM_IN_DUST_STORMS.urls'
@@ -125,6 +123,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-STATIC_ROOT = os.path.join('BASE_DIR', 'staticfiles')
 
 STATIC_URL = '/static/'
