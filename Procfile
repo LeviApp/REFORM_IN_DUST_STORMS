@@ -1,3 +1,2 @@
-web: gunicorn REFORM_IN_DUST_STORMS.wsgi
+web: python manage.py runserver
 
-python manage.py runserver
