@@ -78,6 +78,12 @@ WSGI_APPLICATION = 'REFORM_IN_DUST_STORMS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+import environ
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+
 DATABASES = {
     'default': env.db('DATABASE_URL', default='postgres://ich:7Angel!8Catapult!@localhost/mic')
 }
