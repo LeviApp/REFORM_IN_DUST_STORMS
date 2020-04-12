@@ -79,14 +79,7 @@ WSGI_APPLICATION = 'REFORM_IN_DUST_STORMS.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-       'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mic',
-        'USER': 'ich',
-        'PASSWORD': '7Angel!8Catapult!',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
+    'default': env.db('DATABASE_URL', default='postgres://ich:7Angel!8Catapult!@localhost/mic')
 }
 
 
