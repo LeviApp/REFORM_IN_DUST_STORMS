@@ -78,8 +78,8 @@ WSGI_APPLICATION = 'REFORM_IN_DUST_STORMS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-import django-environ
-env = django-environ.Env(
+import environ from django-environ
+env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
 )
