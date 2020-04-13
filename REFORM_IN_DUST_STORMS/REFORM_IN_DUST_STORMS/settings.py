@@ -25,7 +25,7 @@ SECRET_KEY = 't!jbch#7*lziu*#028n1)a&2nm)x2bg3_3!zx9g9pvs73$j(!h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['reforminduststorms.herokuapp.com']
+ALLOWED_HOSTS = ['reforminduststorms.herokuapp.com', 'localhost:8000']
 
 
 # Application definition
@@ -50,13 +50,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-<<<<<<< HEAD
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-
-=======
-
-    'whitenoise.middleware.WhiteNoiseMiddleware'
->>>>>>> 7f43787051f0a6cd409d573418ba91737e50a25a
 ]
 
 ROOT_URLCONF = 'REFORM_IN_DUST_STORMS.urls'
@@ -83,14 +76,15 @@ WSGI_APPLICATION = 'REFORM_IN_DUST_STORMS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-import environ
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
-
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres://ich:7Angel!8Catapult!@localhost/mic')
+    'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mic',
+        'USER': 'ich',
+        'PASSWORD': '7Angel!8Catapult!',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
 }
 
 
@@ -129,10 +123,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_URL = '/static/'
