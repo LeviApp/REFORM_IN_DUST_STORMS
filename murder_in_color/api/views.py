@@ -35,8 +35,21 @@ def players_api(request):
     if request.method == 'GET':
         serializer = PlayerSerializer(players, many=True)
         return Response(serializer.data)
-    if request.method == 'POST':
-        serializer = PlayerSerializer(players, many=True)
+    elif request.method == 'POST':
+        serializer = PlayerSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
+
+@api_view(['GET',])
+def player_api(request, pk):
+    try:
+        player = Player.objects.get(id=pk)
+    except Player.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = PlayerSerializer(player, many=False)
         return Response(serializer.data)
 
 @api_view(['GET',])
@@ -61,7 +74,7 @@ def criminal_api(request, pk):
         serializer = CriminalSerializer(criminal, many=False)
         return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'POST'])
 def cases_api(request):
     try:
         cases = Case.objects.all()
@@ -70,6 +83,23 @@ def cases_api(request):
 
     if request.method == 'GET':
         serializer = CaseSerializer(cases, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = CaseSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
+
+@api_view(['GET',])
+def case_api(request, pk):
+    try:
+        case = Case.objects.get(id=pk)
+    except Case.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = CaseSerializer(case, many=False)
         return Response(serializer.data)
 
 @api_view(['GET',])
