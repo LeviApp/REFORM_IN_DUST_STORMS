@@ -1,20 +1,172 @@
 [
-    {
-        "model": "murder_in_color.criminal",
-        "pk": 1,
-        "fields": {
-            "name": "Dakota Turner",
-            "gender": "Male",
-            "race": "Indian",
-            "height": "Tall",
-            "age": "Old",
-            "weight": "Thin",
-            "hair_color": "Black",
-            "face_feature": "Large Eyebrows",
-            "unique_feature": "Limp",
-            "crime_place": "Bridge",
-            "weapon": "Hammer"
-        }
+{
+    "model": "murder_in_color.criminal",
+    "pk": 1,
+    "fields": {
+        "name": "Anastasia Hayes",
+        "gender": "Female",
+        "race": "Mexican",
+        "height": "Average",
+        "age": "Young",
+        "weight": "Thin",
+        "hair_color": "Blond",
+        "face_feature": "Big Nose",
+        "unique_feature": "Scar",
+        "crime_place": "Lake",
+        "weapon": "Gun"
     }
-    ]
-    
+},
+{
+    "model": "murder_in_color.criminal",
+    "pk": 2,
+    "fields": {
+        "name": "Charles Obasi",
+        "gender": "Male",
+        "race": "African",
+        "height": "Tall",
+        "age": "Middle-Aged",
+        "weight": "Thin",
+        "hair_color": "Blond",
+        "face_feature": "Big Mouth",
+        "unique_feature": "Scar",
+        "crime_place": "Store",
+        "weapon": "Axe"
+    }
+},
+{
+    "model": "murder_in_color.criminal",
+    "pk": 3,
+    "fields": {
+        "name": "Olivia Bell",
+        "gender": "Female",
+        "race": "European",
+        "height": "Short",
+        "age": "Young",
+        "weight": "Average",
+        "hair_color": "Brown",
+        "face_feature": "Big Nose",
+        "unique_feature": "Missing Teeth",
+        "crime_place": "Wagons",
+        "weapon": "Rake"
+    }
+},
+{
+    "model": "murder_in_color.criminal",
+    "pk": 4,
+    "fields": {
+        "name": "Jacob Rodgers",
+        "gender": "Male",
+        "race": "European",
+        "height": "Short",
+        "age": "Young",
+        "weight": "Thin",
+        "hair_color": "Red",
+        "face_feature": "Big Ears",
+        "unique_feature": "Mole",
+        "crime_place": "Courthouse",
+        "weapon": "Shovel"
+    }
+},
+{
+    "model": "murder_in_color.criminal",
+    "pk": 5,
+    "fields": {
+        "name": "Sophia Jones",
+        "gender": "Female",
+        "race": "African",
+        "height": "Tall",
+        "age": "Middle-Aged",
+        "weight": "Heavy",
+        "hair_color": "Gray",
+        "face_feature": "Big Nose",
+        "unique_feature": "Limp",
+        "crime_place": "Corral",
+        "weapon": "Knife"
+    }
+},
+{
+    "model": "murder_in_color.criminal",
+    "pk": 6,
+    "fields": {
+        "name": "Dakota Turner",
+        "gender": "Male",
+        "race": "Indian",
+        "height": "Tall",
+        "age": "Old",
+        "weight": "Thin",
+        "hair_color": "Black",
+        "face_feature": "Big Eyebrows",
+        "unique_feature": "Limp",
+        "crime_place": "Bridge",
+        "weapon": "Hammer"
+    }
+},
+{
+    "model": "murder_in_color.criminal",
+    "pk": 7,
+    "fields": {
+        "name": "Karla Kun",
+        "gender": "Female",
+        "race": "Chinese",
+        "height": "Short",
+        "age": "Old",
+        "weight": "Average",
+        "hair_color": "Gray",
+        "face_feature": "Big Ears",
+        "unique_feature": "Glasses",
+        "crime_place": "Forest",
+        "weapon": "Rock"
+    }
+},
+{
+    "model": "murder_in_color.criminal",
+    "pk": 8,
+    "fields": {
+        "name": "Martin Garcia",
+        "gender": "Male",
+        "race": "Mexican",
+        "height": "Tall",
+        "age": "Old",
+        "weight": "Heavy",
+        "hair_color": "Gray",
+        "face_feature": "Big Eyebrows",
+        "unique_feature": "Missing Teeth",
+        "crime_place": "Bank",
+        "weapon": "Bow"
+    }
+},
+{
+    "model": "murder_in_color.criminal",
+    "pk": 9,
+    "fields": {
+        "name": "Alisha Trayi",
+        "gender": "Female",
+        "race": "Indian",
+        "height": "Average",
+        "age": "Young",
+        "weight": "Thin",
+        "hair_color": "Red",
+        "face_feature": "Big Ears",
+        "unique_feature": "Mole",
+        "crime_place": "Meadow",
+        "weapon": "Rope"
+    }
+},
+{
+    "model": "murder_in_color.criminal",
+    "pk": 10,
+    "fields": {
+        "name": "Shan Li",
+        "gender": "Male",
+        "race": "Chinese",
+        "height": "Short",
+        "age": "Old",
+        "weight": "Average",
+        "hair_color": "Brown",
+        "face_feature": "Big Nose",
+        "unique_feature": "Limp",
+        "crime_place": "Bonfire",
+        "weapon": "Bottle"
+    }
+}
+]
