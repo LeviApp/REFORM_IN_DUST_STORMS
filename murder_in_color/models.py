@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Player(models.Model):
+    user_id = models.CharField(max_length=50, default="----")
     rank = models.CharField(max_length=50, default="----")
     name = models.CharField(max_length=50, default="----")
     description = models.TextField()
@@ -33,6 +34,7 @@ class Criminal(models.Model):
         return self.name
 
 class Case(models.Model):
+    user_id = models.CharField(max_length=50, default="----")
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     case_name = models.CharField(max_length=50, default="----")
     days_left = models.IntegerField()
