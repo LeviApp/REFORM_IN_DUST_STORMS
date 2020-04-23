@@ -43,7 +43,7 @@ def players_api(request):
             serializer.save()
         return Response(serializer.data)
 
-@api_view(['GET', "PATCH"])
+@api_view(['GET', "PATCH", "DELETE"])
 def player_api(request, pk):
     try:
         player = Player.objects.get(id=pk)
@@ -55,12 +55,16 @@ def player_api(request, pk):
         return Response(serializer.data)
 
     elif request.method == 'PATCH':
-            serializer = PlayerSerializer(player, data=request.data, partial=True)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data)
+        serializer = PlayerSerializer(player, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
 
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+
+    elif request.method == 'DELETE':
+        player.delete()    
+        return Response("Player Deleted")
 
 
 @api_view(['GET',])
@@ -102,7 +106,7 @@ def cases_api(request):
             serializer.save()
         return Response(serializer.data)
         
-@api_view(['GET', 'PATCH'])
+@api_view(['GET', 'PATCH', 'DELETE'])
 def case_api(request, pk):
     try:
         case = Case.objects.get(id=pk)
@@ -120,6 +124,10 @@ def case_api(request, pk):
             return Response(serializer.data)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+
+    elif request.method == 'DELETE':
+        case.delete()    
+        return Response("Case Deleted")
 
 @api_view(['GET',])
 def places_api(request):
