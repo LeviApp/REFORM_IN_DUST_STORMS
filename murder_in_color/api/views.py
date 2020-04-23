@@ -2,6 +2,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from murder_in_color.models import Player, Criminal, City, Place, Witness, Responses, Clue, Case
 from murder_in_color.api.serializers import CitySerializer, PlayerSerializer, CriminalSerializer, CaseSerializer, PlaceSerializer, WitnessSerializer, ResponseSerializer, ClueSerializer
+from django.http import HttpResponse
+from rest_framework import status
 
 @api_view(['GET',])
 def cities_api(request):
@@ -41,7 +43,7 @@ def players_api(request):
             serializer.save()
         return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', "PATCH"])
 def player_api(request, pk):
     try:
         player = Player.objects.get(id=pk)
@@ -51,6 +53,15 @@ def player_api(request, pk):
     if request.method == 'GET':
         serializer = PlayerSerializer(player, many=False)
         return Response(serializer.data)
+
+    elif request.method == 'PATCH':
+            serializer = PlayerSerializer(player, data=request.data, partial=True)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data)
+
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+
 
 @api_view(['GET',])
 def criminals_api(request):
@@ -90,8 +101,8 @@ def cases_api(request):
         if serializer.is_valid():
             serializer.save()
         return Response(serializer.data)
-
-@api_view(['GET',])
+        
+@api_view(['GET', 'PATCH'])
 def case_api(request, pk):
     try:
         case = Case.objects.get(id=pk)
@@ -101,6 +112,14 @@ def case_api(request, pk):
     if request.method == 'GET':
         serializer = CaseSerializer(case, many=False)
         return Response(serializer.data)
+
+    elif request.method == 'PATCH':
+        serializer = CaseSerializer(case, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
 
 @api_view(['GET',])
 def places_api(request):
