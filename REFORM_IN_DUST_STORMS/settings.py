@@ -135,4 +135,4 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-CORS_ORIGIN_WHITELIST = 'http://localhost:4200',
+CORS_ORIGIN_ALLOW_ALL = ('http://localhost:4200', 'https://reforminduststorms.netlify.app/')
