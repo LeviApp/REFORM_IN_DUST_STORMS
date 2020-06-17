@@ -84,13 +84,23 @@ WSGI_APPLICATION = 'REFORM_IN_DUST_STORMS.wsgi.application'
 import environ
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, False)
+    DEBUG=(bool, True)
 )
 
-DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres://ich:7Angel!8Catapult!@localhost/mic')
-}
+# DATABASES = {
+#     'default': env.db('DATABASE_URL', default='postgres://ich:8Catapult!9Tree!@localhost/mic')
+# }
 
+DATABASES = {
+    'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mic',
+        'USER': 'leviapp',
+        'PASSWORD': '8Catapult!9Tree!',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -135,4 +145,4 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-CORS_ORIGIN_ALLOW_ALL = ('http://localhost:4200', 'https://reforminduststorms.netlify.app/')
+CORS_ORIGIN_ALLOW_ALL = True
