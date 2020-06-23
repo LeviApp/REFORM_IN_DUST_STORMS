@@ -29,12 +29,17 @@ def city_api(request, pk):
 
 @api_view(['GET', 'POST'])
 def players_api(request):
+    value = request.headers['userid']
+
     try:
-        players = Player.objects.all()
+        players = Player.objects.filter(user_id=value)
+        print(players, value,'this is the initial value')
+
     except Player.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
+        print(value, request.headers['userid'], 'this is the headers')
         serializer = PlayerSerializer(players, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
