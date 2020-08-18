@@ -47,10 +47,10 @@
         "model": "murder_in_color.responses",
         "pk": 5,
         "fields": {
-            "suspect": "We could see eye to eye.",
-            "place": "He noticed the sound of neighing.",
-            "weapon": "I don't know anything about that, sorry.",
-            "goodbye": "You have a splendid day.",
+            "suspect": "You would need at least two of him to make a shadow.",
+            "place": "\"Smoke follows beauty\", he kept saying.",
+            "weapon": "I didn't see anything.",
+            "goodbye": "Safe travels!",
             "witness": 5
         }
     },
@@ -58,10 +58,10 @@
         "model": "murder_in_color.responses",
         "pk": 6,
         "fields": {
-            "suspect": "You would need at least two of him to make a shadow.",
-            "place": "\"Smoke follows beauty\", he kept saying.",
-            "weapon": "I didn't see anything.",
-            "goodbye": "Safe travels!",
+            "suspect": "We could see eye to eye.",
+            "place": "He noticed the sound of neighing.",
+            "weapon": "I don't know anything about that, sorry.",
+            "goodbye": "You have a splendid day.",
             "witness": 6
         }
     },
@@ -69,10 +69,10 @@
         "model": "murder_in_color.responses",
         "pk": 7,
         "fields": {
-            "suspect": "I have a sore neck after talking to him.",
-            "place": "He said he sat on a stone there.",
-            "weapon": "I cannot speak on this.",
-            "goodbye": "Have a great day ahead!",
+            "suspect": "I looked up to him.",
+            "place": "He never mentioned any places he visited.",
+            "weapon": "I saw him get on the train with something with a handle.",
+            "goodbye": "Take it easy!",
             "witness": 7
         }
     },
@@ -80,10 +80,10 @@
         "model": "murder_in_color.responses",
         "pk": 8,
         "fields": {
-            "suspect": "His eyebrows could rival a bush.",
-            "place": "I saw him doing something quite strange there. He had asked me if I had a match, because the light went out.",
-            "weapon": "I have nothing odd to report about that.",
-            "goodbye": "No Problem!",
+            "suspect": "He was a giant.",
+            "place": "I cannot add anything new about it.",
+            "weapon": "I noticed one of my tools went missing right after he visited.",
+            "goodbye": "I hope you catch him!",
             "witness": 8
         }
     },
@@ -91,10 +91,10 @@
         "model": "murder_in_color.responses",
         "pk": 9,
         "fields": {
-            "suspect": "He was as tall as me.",
-            "place": "He mentioned something about a group of rocks.",
-            "weapon": "Everything seemed normal to me.",
-            "goodbye": "I am glad to help!",
+            "suspect": "If I did an eyebrow battle with his, we would be evenly matched.",
+            "place": "I did not hear anything about that.",
+            "weapon": "He was carrying around a banging instrument.",
+            "goodbye": "Take care!",
             "witness": 9
         }
     },
@@ -102,10 +102,10 @@
         "model": "murder_in_color.responses",
         "pk": 10,
         "fields": {
-            "suspect": "The thing that stood out to me was his eyebrows.",
-            "place": "He was telling me how well the fire was built.",
-            "weapon": "I did not hear anything about that!",
-            "goodbye": "Adios!",
+            "suspect": "He had a large umbrella over his eyes.",
+            "place": "I cannot add any extra information on the place.",
+            "weapon": "He could have used the tool to fasten the table together.",
+            "goodbye": "Farewell!",
             "witness": 10
         }
     },
@@ -113,10 +113,10 @@
         "model": "murder_in_color.responses",
         "pk": 11,
         "fields": {
-            "suspect": "He had a lot of hair, and it wasn't on top.",
-            "place": "\"The fire was quite blinding!\", he said.",
-            "weapon": "I saw nothing special.",
-            "goodbye": "I wish you well!",
+            "suspect": "I wondered how many doorways he ran into.",
+            "place": "That never came up in our conversation.",
+            "weapon": "I noticed the head of it sticking out of a bag.",
+            "goodbye": "Be blessed!",
             "witness": 11
         }
     },
@@ -124,10 +124,10 @@
         "model": "murder_in_color.responses",
         "pk": 12,
         "fields": {
-            "suspect": "I would have to stand on myself to get a good look at his face.",
-            "place": "He was telling me how smooth the rocks were over there.",
-            "weapon": "I didn't see any weapon.",
-            "goodbye": "I wish there was more I could do!",
+            "suspect": "Forehead sweat would never reach his eyes.",
+            "place": "I cannot comment on this.",
+            "weapon": "I thought I saw a T shaped item in a bag.",
+            "goodbye": "I wish you the best!",
             "witness": 12
         }
     },
@@ -135,10 +135,10 @@
         "model": "murder_in_color.responses",
         "pk": 13,
         "fields": {
-            "suspect": "His hair was the color of coal.",
-            "place": "He did not mention anything about where he had been.",
-            "weapon": "I cannot help you with that.",
-            "goodbye": "I hope you find him soon!",
+            "suspect": "He would fit in well here.",
+            "place": "He commented about how well their aim was.",
+            "weapon": "If he had one, I did not see it.",
+            "goodbye": "See you later!",
             "witness": 13
         }
     },
@@ -146,10 +146,10 @@
         "model": "murder_in_color.responses",
         "pk": 14,
         "fields": {
-            "suspect": "I was surprised to see someone else as thin as me.",
-            "place": "No information on the place to report.",
-            "weapon": "I couldn't be sure about any weapon.",
-            "goodbye": "I hope everything turns out alright!",
+            "suspect": "I asked him if he was from around here.",
+            "place": "He mentioned hearing crickets in the night.",
+            "weapon": "There was nothing I noticed.",
+            "goodbye": "Have a great rest of your day!",
             "witness": 14
         }
     },
@@ -157,10 +157,10 @@
         "model": "murder_in_color.responses",
         "pk": 15,
         "fields": {
-            "suspect": "I thought I saw some ribs on the man.",
-            "place": "I could not give you any details about the location.",
-            "weapon": "I did not hear anything about that.",
-            "goodbye": "I hope you find who you are looking for!",
+            "suspect": "There was not much to him.",
+            "place": "He mentioned how he loved the smell of coffee.",
+            "weapon": "I didn't see anything to make me question him.",
+            "goodbye": "Wonderful day!",
             "witness": 15
         }
     },
@@ -168,10 +168,10 @@
         "model": "murder_in_color.responses",
         "pk": 16,
         "fields": {
-            "suspect": "He bragged how good he was with a bow and arrow.",
-            "place": "I cannot remember anything about the place he mentioned.",
-            "weapon": "I am sorry, I cannot give you a definite answer.",
-            "goodbye": "Goodbye!",
+            "suspect": "He could fit through a large crack easily.",
+            "place": "He said he had helped gather wood for a fire nearby.",
+            "weapon": "If I knew anything, I would tell you.",
+            "goodbye": "Bye!",
             "witness": 16
         }
     },
@@ -179,10 +179,10 @@
         "model": "murder_in_color.responses",
         "pk": 17,
         "fields": {
-            "suspect": "His hair blended into the night sky like mine.",
-            "place": "I do not recall anything.",
-            "weapon": "Nothing comes to mind.",
-            "goodbye": "If I think of any more information, I will let you know!",
+            "suspect": "He showed me his war cry.",
+            "place": "He talked about hearing gunshots",
+            "weapon": "I found nothing in his hands.",
+            "goodbye": "Have a good trip!",
             "witness": 17
         }
     },
@@ -190,10 +190,10 @@
         "model": "murder_in_color.responses",
         "pk": 18,
         "fields": {
-            "suspect": "He mentioned he had to get something from his tent.",
-            "place": "I cannot help you, unfortunately.",
-            "weapon": "I forget what he mentioned about that.",
-            "goodbye": "I wish I could have assisted more!",
+            "suspect": "If the wind blew, he would have been swept away.",
+            "place": "He mentioned a bell he heard.",
+            "weapon": "I did not notice anything suspicious.",
+            "goodbye": "Don't worry about!",
             "witness": 18
         }
     },
@@ -201,10 +201,10 @@
         "model": "murder_in_color.responses",
         "pk": 19,
         "fields": {
-            "suspect": "If I did an eyebrow battle with his, we would be evenly matched.",
-            "place": "I did not hear anything about that.",
-            "weapon": "He was carrying around a banging instrument.",
-            "goodbye": "Take care!",
+            "suspect": "He was as tall as me.",
+            "place": "He mentioned something about a group of rocks.",
+            "weapon": "Everything seemed normal to me.",
+            "goodbye": "I am glad to help!",
             "witness": 19
         }
     },
@@ -212,10 +212,10 @@
         "model": "murder_in_color.responses",
         "pk": 20,
         "fields": {
-            "suspect": "He had a large umbrella over his eyes.",
-            "place": "I cannot add any extra information on the place.",
-            "weapon": "He could have used the tool to fasten the table together.",
-            "goodbye": "Farewell!",
+            "suspect": "I would have to stand on myself to get a good look at his face.",
+            "place": "He was telling me how smooth the rocks were over there.",
+            "weapon": "I didn't see any weapon.",
+            "goodbye": "I wish there was more I could do!",
             "witness": 20
         }
     },
@@ -223,10 +223,10 @@
         "model": "murder_in_color.responses",
         "pk": 21,
         "fields": {
-            "suspect": "He was a giant.",
-            "place": "I cannot add anything new about it.",
-            "weapon": "I noticed one of my tools went missing right after he visited.",
-            "goodbye": "I hope you catch him!",
+            "suspect": "I have a sore neck after talking to him.",
+            "place": "He said he sat on a stone there.",
+            "weapon": "I cannot speak on this.",
+            "goodbye": "Have a great day ahead!",
             "witness": 21
         }
     },
@@ -234,10 +234,10 @@
         "model": "murder_in_color.responses",
         "pk": 22,
         "fields": {
-            "suspect": "I looked up to him.",
-            "place": "He never mentioned any places he visited.",
-            "weapon": "I saw him get on the train with something with a handle.",
-            "goodbye": "Take it easy!",
+            "suspect": "His eyebrows could rival a bush.",
+            "place": "I saw him doing something quite strange there. He had asked me if I had a match, because the light went out.",
+            "weapon": "I have nothing odd to report about that.",
+            "goodbye": "No Problem!",
             "witness": 22
         }
     },
@@ -245,10 +245,10 @@
         "model": "murder_in_color.responses",
         "pk": 23,
         "fields": {
-            "suspect": "Forehead sweat would never reach his eyes.",
-            "place": "I cannot comment on this.",
-            "weapon": "I thought I saw a T shaped item in a bag.",
-            "goodbye": "I wish you the best!",
+            "suspect": "He had a lot of hair, and it wasn't on top.",
+            "place": "\"The fire was quite blinding!\", he said.",
+            "weapon": "I saw nothing special.",
+            "goodbye": "I wish you well!",
             "witness": 23
         }
     },
@@ -256,10 +256,10 @@
         "model": "murder_in_color.responses",
         "pk": 24,
         "fields": {
-            "suspect": "I wondered how many doorways he ran into.",
-            "place": "That never came up in our conversation.",
-            "weapon": "I noticed the head of it sticking out of a bag.",
-            "goodbye": "Be blessed!",
+            "suspect": "The thing that stood out to me was his eyebrows.",
+            "place": "He was telling me how well the fire was built.",
+            "weapon": "I did not hear anything about that!",
+            "goodbye": "Adios!",
             "witness": 24
         }
     },
@@ -267,10 +267,10 @@
         "model": "murder_in_color.responses",
         "pk": 25,
         "fields": {
-            "suspect": "He would fit in well here.",
-            "place": "He commented about how well their aim was.",
-            "weapon": "If he had one, I did not see it.",
-            "goodbye": "See you later!",
+            "suspect": "His hair was the color of coal.",
+            "place": "He did not mention anything about where he had been.",
+            "weapon": "I cannot help you with that.",
+            "goodbye": "I hope you find him soon!",
             "witness": 25
         }
     },
@@ -278,10 +278,10 @@
         "model": "murder_in_color.responses",
         "pk": 26,
         "fields": {
-            "suspect": "I asked him if he was from around here.",
-            "place": "He mentioned hearing crickets in the night.",
-            "weapon": "There was nothing I noticed.",
-            "goodbye": "Have a great rest of your day!",
+            "suspect": "He bragged how good he was with a bow and arrow.",
+            "place": "I cannot remember anything about the place he mentioned.",
+            "weapon": "I am sorry, I cannot give you a definite answer.",
+            "goodbye": "Goodbye!",
             "witness": 26
         }
     },
@@ -289,10 +289,10 @@
         "model": "murder_in_color.responses",
         "pk": 27,
         "fields": {
-            "suspect": "He could fit through a large crack easily.",
-            "place": "He said he had helped gather wood for a fire nearby.",
-            "weapon": "If I knew anything, I would tell you.",
-            "goodbye": "Bye!",
+            "suspect": "I thought I saw some ribs on the man.",
+            "place": "I could not give you any details about the location.",
+            "weapon": "I did not hear anything about that.",
+            "goodbye": "I hope you find who you are looking for!",
             "witness": 27
         }
     },
@@ -300,10 +300,10 @@
         "model": "murder_in_color.responses",
         "pk": 28,
         "fields": {
-            "suspect": "He showed me his war cry.",
-            "place": "He talked about hearing gunshots",
-            "weapon": "I found nothing his hands.",
-            "goodbye": "Have a good trip!",
+            "suspect": "His hair blended into the night sky like mine.",
+            "place": "I do not recall anything.",
+            "weapon": "Nothing comes to mind.",
+            "goodbye": "If I think of any more information, I will let you know!",
             "witness": 28
         }
     },
@@ -311,10 +311,10 @@
         "model": "murder_in_color.responses",
         "pk": 29,
         "fields": {
-            "suspect": "If the wind blew, he would have been swept away.",
-            "place": "He mentioned a bell he heard.",
-            "weapon": "I did not find anything suspicious.",
-            "goodbye": "Don't worry about!",
+            "suspect": "He mentioned he had to get something from his tent.",
+            "place": "I cannot help you, unfortunately.",
+            "weapon": "I forget what he mentioned about that.",
+            "goodbye": "I wish I could have assisted more!",
             "witness": 29
         }
     },
@@ -322,10 +322,10 @@
         "model": "murder_in_color.responses",
         "pk": 30,
         "fields": {
-            "suspect": "There was not much to him.",
-            "place": "He mentioned how he loved the smell of coffee.",
-            "weapon": "I didn't see anything to make me question him.",
-            "goodbye": "Wonderful day!",
+            "suspect": "I was surprised to see someone else as thin as me.",
+            "place": "No information on the place to report.",
+            "weapon": "I couldn't be sure about any weapon.",
+            "goodbye": "I hope everything turns out alright!",
             "witness": 30
         }
     }

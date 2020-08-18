@@ -175,7 +175,7 @@
         "pk": 20,
         "fields": {
             "name": "Wagons",
-            "description": "A group of wagons is stopped. A man and his wife get ready for lunch, cooking on a campfire. You smell freshly\u2029baked beans, chicken, and rice. The sound of a team of horses rings, as they are being cared for. A lantern sits on the back of a wagon.",
+            "description": "A group of wagons is stopped. A man and his wife get ready for lunch, cooking on a campfire. You smell freshly\u2029baked beans, chicken, and rice. The sound of a team of horses rings as they are being cared for. A lantern sits on the back of a wagon.",
             "city": 4
         }
     },
