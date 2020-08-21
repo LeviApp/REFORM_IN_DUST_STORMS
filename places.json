@@ -67,7 +67,7 @@
         "pk": 8,
         "fields": {
             "name": "Blacksmith",
-            "description": "You hear the loud bangs of a blacksmith hammering and reshaping a customer's tool. You watch as sparks fly upward. There is a stable in the back. Horses stomp around making the place dusty. Horse shoes lay on a rack to be sold.",
+            "description": "You hear the loud bangs of a blacksmith hammering and reshaping a customer's tool. You watch as sparks fly upward. There is a stable in the back. Horses stomp around making the place dusty. Horseshoes lay on a rack to be sold.",
             "city": 2
         }
     },
