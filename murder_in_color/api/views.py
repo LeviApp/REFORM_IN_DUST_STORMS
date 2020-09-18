@@ -29,8 +29,8 @@ def city_api(request, pk):
 
 @api_view(['GET', 'POST'])
 def players_api(request):
-    value = request.headers['userid']
-
+    value = request.GET.get('userid', )
+    print(value, 'this is the value')
     try:
         players = Player.objects.filter(user_id=value)
         print(players, value,'this is the initial value')
@@ -39,7 +39,6 @@ def players_api(request):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        print(value, request.headers['userid'], 'this is the headers')
         serializer = PlayerSerializer(players, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':

@@ -25,7 +25,7 @@ SECRET_KEY = 't!jbch#7*lziu*#028n1)a&2nm)x2bg3_3!zx9g9pvs73$j(!h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['reforminduststorms.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['reforminduststorms.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 
 ]
 
+
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'murder_in_color.middleware.ExceptionLoggingMiddleware',
 
 ]
 
