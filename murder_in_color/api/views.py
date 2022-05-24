@@ -70,6 +70,16 @@ def player_api(request, pk):
         player.delete()    
         return Response("Player Deleted")
 
+@api_view(['GET',])
+def filtered_players_api(request):
+    try:
+        player = Player.objects.filter(user_id=request.headers['userid'])
+    except Player.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = PlayerSerializer(player, many=True)
+        return Response(serializer.data)
 
 @api_view(['GET',])
 def criminals_api(request):
@@ -134,6 +144,17 @@ def case_api(request, pk):
         return Response("Case Deleted")
 
 @api_view(['GET',])
+def filtered_cases_api(request):
+    try:
+        case = Case.objects.filter(user_id=request.headers['userid'])
+    except Case.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = CaseSerializer(case, many=True)
+        return Response(serializer.data)
+
+@api_view(['GET',])
 def places_api(request):
     try:
         places = Place.objects.all()
@@ -156,6 +177,18 @@ def place_api(request, pk):
         return Response(serializer.data)
 
 @api_view(['GET',])
+def filtered_places_api(request):
+    try:
+        places = Place.objects.filter(city=request.headers['cityid'])
+    except Place.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = PlaceSerializer(places, many=True)
+        return Response(serializer.data)
+
+
+@api_view(['GET',])
 def witnesses_api(request):
     try:
         witnesses = Witness.objects.all()
@@ -175,6 +208,17 @@ def witness_api(request, pk):
 
     if request.method == 'GET':
         serializer = WitnessSerializer(witness, many=False)
+        return Response(serializer.data)
+
+@api_view(['GET',])
+def filtered_witness_api(request):
+    try:
+        witness = Witness.objects.filter(place=request.headers['placeid'])
+    except Witness.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = WitnessSerializer(witness, many=True)
         return Response(serializer.data)
 
 @api_view(['GET',])
@@ -200,6 +244,17 @@ def response_api(request, pk):
         return Response(serializer.data)
 
 @api_view(['GET',])
+def filtered_responses_api(request):
+    try:
+        responses = Responses.objects.filter(witness=request.headers['witnessid'])
+    except Responses.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = ResponseSerializer(responses, many=True)
+        return Response(serializer.data)
+
+@api_view(['GET',])
 def clues_api(request):
     try:
         clues = Clue.objects.all()
@@ -219,4 +274,15 @@ def clue_api(request, pk):
 
     if request.method == 'GET':
         serializer = ClueSerializer(clue, many=False)
+        return Response(serializer.data)
+
+@api_view(['GET',])
+def filtered_clues_api(request):
+    try:
+        clue = Clue.objects.filter(place=request.headers['placeid'])
+    except Clue.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = ClueSerializer(clue, many=True)
         return Response(serializer.data)
