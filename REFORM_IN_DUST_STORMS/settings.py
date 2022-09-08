@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't!jbch#7*lziu*#028n1)a&2nm)x2bg3_3!zx9g9pvs73$j(!h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['reforminduststorms.herokuapp.com', '127.0.0.1', 'localhost']
 
@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'REFORM_IN_DUST_STORMS.wsgi.application'
 import environ
 env = environ.Env(
     # set casting, default value
-    DEBUG=True
+    DEBUG=(bool, True)
 )
 
 # DATABASES = {
