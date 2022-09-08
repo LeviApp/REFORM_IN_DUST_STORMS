@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'REFORM_IN_DUST_STORMS.wsgi.application'
 import environ
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, True)
+    DEBUG=True
 )
 
 # DATABASES = {
