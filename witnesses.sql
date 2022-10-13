@@ -1,0 +1,38 @@
+CREATE TABLE IF NOT EXISTS public.murder_in_color_witness (
+    id integer NOT NULL,
+    name character varying(50) NOT NULL,
+    description text NOT NULL,
+    place_id integer NOT NULL
+);
+
+INSERT INTO public.murder_in_color_witness VALUES
+    (1,'Martha Baggins','You spot a beautiful, young Mexican lady. She is average in weight, but small in height. Her black hair gleams in the sun. You notice a small mole next to her giant mouth.',1),
+    (2,'Ezra Banks','You see a tall, middle-aged European built like a horse. He has a scar across his forehead. He has eyebrows that were so big. You see blond hair trying to escape the cowboy hat on top.',2),
+    (3,'Karla Kun','You see an elderly Chinese cook taking her break. She has large, round glasses to see with, and big ears to hear with. Though she is short, her gray hair speaks of her experience. She looks average when it comes to her weight.',3),
+    (4,'Rohan Dalip','You see an old Indian with ordinary stature. You notice he has an extra long nose. You see his tongue as he smiles back with a missing tooth. His brown hair blows in the wind as you stare at his thin frame.',4),
+    (5,'Jacob Rodgers','A short, young European stares back at you with a tired look on his face. He has a mole on his lip along with large ears. His red hair is short. His thin body blends into the background.',5),
+    (6,'Sophia Jones','You see a tall, African lady in front of you. You noticed a limp in her step as she came closer to greet you. She wears a flowery hat to cover her gray head. She is middle-aged with a bulky figure. She has a larger than normal nose.',6),
+    (7,'Shan Li','You see a short and average-sized Chinese man in front of you. He is an older gentleman with a limp. You are drawn to a large nose sitting in the middle of his small face. He has brown hair under his conductor''s hat.',7),
+    (8,'Noah Smith','You see the medium-aged, European blacksmith get up, clean his hands, and limp towards you. He is average in both height and weight. He has short, blond hair, and a mouth that is larger than normal.',8),
+    (9,'Martin Garcia','You see a tall, heavy-set Mexican man greet you. He has giant eyebrows, as well as a missing tooth. He is an older gentleman with gray hair.',9),
+    (10,'Alisha Trayi','You come across a skinny Indian with medium height. She has unusually red, long hair. She is young with a mole on her forehead. Underneath her hair, you notice large ears.',10),
+    (11,'Kelly Davis','You see a heavy-structured, short African. Her beauty is complemented with glasses that sit on top of big ears. She is middle-aged with gray hair from life experiences.',11),
+    (12,'Tara Nira','A tall, thin Indian walks up to you. She has large eyebrows with a mole right above. Her blond hair sparkles in the sunlight. She looks young.',12),
+    (13,'Mitsu Hakan','You watch a young Indian warrior come over to you. He is average height, but built strong and bulky. He has a scar across his chest. He has brown hair, and you notice his big mouth as you speak with him.',13),
+    (14,'Winona Miller','A middle-aged Indian lady gets up from gardening and meets you. Both her height and weight are ordinary.  She has a couple of missing teeth, and a large nose above the mouth. She has red hair to match her beautiful frame.',14),
+    (15,'Adriel Yazzie','You see an elderly Indian medicine man approach. He has big eyebrows and hair, both are black. He has a scar on his temple from previous fights. He is tall and thin.',15),
+    (16,'Elizabeth Flores','You see a short and thin elder. She is Mexican in origin. She has gray hair and large ears next to it. She is also wearing glasses.',16),
+    (17,'Song Tao','A tall and bulky lady comes to you. She is Chinese. She has a scar on her chin and red hair on top. She looks young, but has a nose larger than the average.',17),
+    (18,'Issa Agu','You see a middle-aged African ahead of you. She has an average stature, but is skinny. She has a mole in the middle of her lip, and black hair flowing down. She also has thick eyebrows.',18),
+    (19,'Dakota Turner','You see a tall and thin Indian get up from panning gold. He drags an injured foot as he meets you. He is an experienced elder with black hair and big eyebrows.',19),
+    (20,'Abel Price','You come to an elderly Chinese gentleman wearing a cowboy hat. He has a short, but big figure. You see brown hair sticking out of his hat. You notice that he has a big mouth and is wearing glasses.',20),
+    (21,'Anastasia Hayes','You see a beautiful young Mexican lady come out of the Cabin. She has a scar across her hand from a lifestyle of hard work. You notice that her nose is sticking out further than the average. Her long blond hair engulfs her medium-statured, thin body.',21),
+    (22,'Ruth Phillips','You see a middle-aged Chinese lady with brown hair. Her glasses cover her face. She is average in height, but big in size. You notice her big mouth that fits perfectly with her friendly and big personality.',22),
+    (23,'Charles Obasi','You see a medium-aged, tall, and thin African approach. He has a scar across his cheek from his labors. You notice he has really short blond hair and large mouth as he greets you.',23),
+    (24,'Caton Perez','You notice a short, average-sized young man. He is a Mexican with unusual gray hair. You discover that he has a couple of teeth missing, but above-average ears.',24),
+    (25,'Vincent Imari','You notice an average African in both weight and height come up to you. His old age requires him to wear glasses. He has large eyebrows, which are gray along with his hair.',25),
+    (26,'Maria Valdez','You see an elderly Mexican. Her frame is large, but her height is average. She has blond hair placed in a bun on top of her head. She has a big mouth and a mole right next to it.',26),
+    (27,'Olivia Bell','You see a short European lady average in weight. She looks young, and has a big nose for her small face. You see long, brown hair flowing from under a hat she wears. You discover rather quickly that she is missing some teeth when she greets you.',27),
+    (28,'Chester Thompson','You see an elderly army commander, tall and average-sized, approach you with a limp. He has black hair, large eyebrows, and is of European descent.',28),
+    (29,'Meagan Harper','You see a middle-aged, medium-statured, and medium-sized African. She favors one foot you noticed as she came up. She has red hair, and large ears poking out of that hair.',29),
+    (30,'Cheng Biming','You watch a tall and thin Chinese soldier. He has a scar next to his large ears from past battles. He has black hair and looks to be middle-aged.',30);
