@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from rest_framework import status
 
 @api_view(['GET',])
-def cities_api(self, request):
+def cities_api(request):
     try:
         cities = City.objects.all()
     except City.DoesNotExist:
@@ -17,7 +17,7 @@ def cities_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def city_api(self, request, pk):
+def city_api(request, pk):
     try:
         city = City.objects.get(id=pk)
     except City.DoesNotExist:
@@ -28,7 +28,7 @@ def city_api(self, request, pk):
         return Response(serializer.data)
 
 @api_view(['GET', 'POST'])
-def players_api(self, request):
+def players_api(request):
     try:
         players = Player.objects.all()
 
@@ -45,7 +45,7 @@ def players_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET', "PATCH", "DELETE"])
-def player_api(self, request, pk):
+def player_api(request, pk):
     try:
         player = Player.objects.get(id=pk)
     except Player.DoesNotExist:
@@ -68,8 +68,8 @@ def player_api(self, request, pk):
         return Response("Player Deleted")
 
 @api_view(['GET',])
-def filtered_players_api(self, request):
-    value = self.request.headers['userid']
+def filtered_players_api(request):
+    value = request.headers['userid']
     try:
         player = Player.objects.filter(user_id=value)
     except Player.DoesNotExist:
@@ -80,7 +80,7 @@ def filtered_players_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def criminals_api(self, request):
+def criminals_api(request):
     try:
         criminals = Criminal.objects.all()
     except Criminal.DoesNotExist:
@@ -91,7 +91,7 @@ def criminals_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def criminal_api(self, request, pk):
+def criminal_api(request, pk):
     try:
         criminal = Criminal.objects.get(id=pk)
     except Criminal.DoesNotExist:
@@ -102,7 +102,7 @@ def criminal_api(self, request, pk):
         return Response(serializer.data)
 
 @api_view(['GET', 'POST'])
-def cases_api(self, request):
+def cases_api(request):
     try:
         cases = Case.objects.all()
     except Case.DoesNotExist:
@@ -119,7 +119,7 @@ def cases_api(self, request):
         return Response(serializer.data)
         
 @api_view(['GET', 'PATCH', 'DELETE'])
-def case_api(self, request, pk):
+def case_api(request, pk):
     try:
         case = Case.objects.get(id=pk)
     except Case.DoesNotExist:
@@ -142,8 +142,8 @@ def case_api(self, request, pk):
         return Response("Case Deleted")
 
 @api_view(['GET',])
-def filtered_cases_api(self, request):
-    value = self.request.headers['userid']
+def filtered_cases_api(request):
+    value = request.headers['userid']
     try:
         case = Case.objects.filter(user_id=value)
     except Case.DoesNotExist:
@@ -154,7 +154,7 @@ def filtered_cases_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def places_api(self, request):
+def places_api(request):
     try:
         places = Place.objects.all()
     except Place.DoesNotExist:
@@ -165,7 +165,7 @@ def places_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def place_api(self, request, pk):
+def place_api(request, pk):
     try:
         place = Place.objects.get(id=pk)
     except Place.DoesNotExist:
@@ -176,8 +176,8 @@ def place_api(self, request, pk):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def filtered_places_api(self, request):
-    value = self.request.headers['cityid']
+def filtered_places_api(request):
+    value = request.headers['cityid']
     try:
         places = Place.objects.filter(city=value)
     except Place.DoesNotExist:
@@ -189,7 +189,7 @@ def filtered_places_api(self, request):
 
 
 @api_view(['GET',])
-def witnesses_api(self, request):
+def witnesses_api(request):
     try:
         witnesses = Witness.objects.all()
     except Witness.DoesNotExist:
@@ -200,7 +200,7 @@ def witnesses_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def witness_api(self, request, pk):
+def witness_api(request, pk):
     try:
         witness = Witness.objects.get(id=pk)
     except Witness.DoesNotExist:
@@ -211,8 +211,8 @@ def witness_api(self, request, pk):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def filtered_witness_api(self, request):
-    value = self.request.headers['placeid']
+def filtered_witness_api(request):
+    value = request.headers['placeid']
 
     try:
         witness = Witness.objects.filter(place=value)
@@ -224,7 +224,7 @@ def filtered_witness_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def responses_api(self, request):
+def responses_api(request):
     try:
         responses = Responses.objects.all()
     except Responses.DoesNotExist:
@@ -235,7 +235,7 @@ def responses_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def response_api(self, request, pk):
+def response_api(request, pk):
     try:
         response = Responses.objects.get(id=pk)
     except Responses.DoesNotExist:
@@ -246,8 +246,8 @@ def response_api(self, request, pk):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def filtered_responses_api(self, request):
-    value = self.request.headers['witnessid']
+def filtered_responses_api(request):
+    value = request.headers['witnessid']
 
     try:
         responses = Responses.objects.filter(witness=value)
@@ -259,7 +259,7 @@ def filtered_responses_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def clues_api(self, request):
+def clues_api(request):
     try:
         clues = Clue.objects.all()
     except Clue.DoesNotExist:
@@ -270,7 +270,7 @@ def clues_api(self, request):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def clue_api(self, request, pk):
+def clue_api(request, pk):
     try:
         clue = Clue.objects.get(id=pk)
     except Clue.DoesNotExist:
@@ -281,8 +281,8 @@ def clue_api(self, request, pk):
         return Response(serializer.data)
 
 @api_view(['GET',])
-def filtered_clues_api(self, request):
-    value = self.request.headers['witnessid']
+def filtered_clues_api(request):
+    value = request.headers['witnessid']
     try:
         clue = Clue.objects.filter(place=value)
     except Clue.DoesNotExist:
