@@ -5,7 +5,7 @@ from murder_in_color.api.serializers import CitySerializer, PlayerSerializer, Cr
 from django.http import HttpResponse
 from rest_framework import status
 
-@api_view(['GET',])
+@api_view(['GET', 'POST'])
 def cities_api(request):
     try:
         cities = City.objects.all()
@@ -15,8 +15,14 @@ def cities_api(request):
     if request.method == 'GET':
         serializer = CitySerializer(cities, many=True)
         return Response(serializer.data)
+    
+    elif request.method == 'POST':
+        serializer = CitySerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'PATCH', 'DELETE'])
 def city_api(request, pk):
     try:
         city = City.objects.get(id=pk)
@@ -26,6 +32,18 @@ def city_api(request, pk):
     if request.method == 'GET':
         serializer = CitySerializer(city, many=False)
         return Response(serializer.data)
+    
+    elif request.method == 'PATCH':
+        serializer = CitySerializer(city, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+
+    elif request.method == 'DELETE':
+        city.delete()    
+        return Response("City Deleted")
 
 @api_view(['GET', 'POST'])
 def players_api(request):
@@ -38,6 +56,7 @@ def players_api(request):
     if request.method == 'GET':
         serializer = PlayerSerializer(players, many=True)
         return Response(serializer.data)
+    
     elif request.method == 'POST':
         serializer = PlayerSerializer(data=request.data)
         if serializer.is_valid():
@@ -79,7 +98,7 @@ def filtered_players_api(request):
         serializer = PlayerSerializer(player, many=True)
         return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'POST'])
 def criminals_api(request):
     try:
         criminals = Criminal.objects.all()
@@ -89,8 +108,14 @@ def criminals_api(request):
     if request.method == 'GET':
         serializer = CriminalSerializer(criminals, many=True)
         return Response(serializer.data)
+    
+    elif request.method == 'POST':
+        serializer = CriminalSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'PATCH', 'DELETE'])
 def criminal_api(request, pk):
     try:
         criminal = Criminal.objects.get(id=pk)
@@ -100,6 +125,18 @@ def criminal_api(request, pk):
     if request.method == 'GET':
         serializer = CriminalSerializer(criminal, many=False)
         return Response(serializer.data)
+    
+    elif request.method == 'PATCH':
+        serializer = CriminalSerializer(criminal, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+
+    elif request.method == 'DELETE':
+        criminal.delete()    
+        return Response("Criminal Deleted")
 
 @api_view(['GET', 'POST'])
 def cases_api(request):
@@ -153,7 +190,7 @@ def filtered_cases_api(request):
         serializer = CaseSerializer(case, many=True)
         return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'POST'])
 def places_api(request):
     try:
         places = Place.objects.all()
@@ -163,8 +200,14 @@ def places_api(request):
     if request.method == 'GET':
         serializer = PlaceSerializer(places, many=True)
         return Response(serializer.data)
+    
+    elif request.method == 'POST':
+        serializer = PlaceSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'PATCH', 'DELETE'])
 def place_api(request, pk):
     try:
         place = Place.objects.get(id=pk)
@@ -174,6 +217,18 @@ def place_api(request, pk):
     if request.method == 'GET':
         serializer = PlaceSerializer(place, many=False)
         return Response(serializer.data)
+    
+    elif request.method == 'PATCH':
+        serializer = PlaceSerializer(place, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+
+    elif request.method == 'DELETE':
+        place.delete()    
+        return Response("Place Deleted")
 
 @api_view(['GET',])
 def filtered_places_api(request):
@@ -188,7 +243,7 @@ def filtered_places_api(request):
         return Response(serializer.data)
 
 
-@api_view(['GET',])
+@api_view(['GET', 'POST'])
 def witnesses_api(request):
     try:
         witnesses = Witness.objects.all()
@@ -198,8 +253,15 @@ def witnesses_api(request):
     if request.method == 'GET':
         serializer = WitnessSerializer(witnesses, many=True)
         return Response(serializer.data)
+    
+    elif request.method == 'POST':
+        serializer = WitnessSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
 
-@api_view(['GET',])
+
+@api_view(['GET', 'PATCH', 'DELETE'])
 def witness_api(request, pk):
     try:
         witness = Witness.objects.get(id=pk)
@@ -209,6 +271,18 @@ def witness_api(request, pk):
     if request.method == 'GET':
         serializer = WitnessSerializer(witness, many=False)
         return Response(serializer.data)
+    
+    elif request.method == 'PATCH':
+        serializer = WitnessSerializer(witness, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+
+    elif request.method == 'DELETE':
+        witness.delete()    
+        return Response("Witness Deleted")
 
 @api_view(['GET',])
 def filtered_witness_api(request):
@@ -223,7 +297,7 @@ def filtered_witness_api(request):
         serializer = WitnessSerializer(witness, many=True)
         return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'POST'])
 def responses_api(request):
     try:
         responses = Responses.objects.all()
@@ -233,8 +307,14 @@ def responses_api(request):
     if request.method == 'GET':
         serializer = ResponseSerializer(responses, many=True)
         return Response(serializer.data)
+    
+    elif request.method == 'POST':
+        serializer = ResponseSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'PATCH', 'DELETE'])
 def response_api(request, pk):
     try:
         response = Responses.objects.get(id=pk)
@@ -244,6 +324,18 @@ def response_api(request, pk):
     if request.method == 'GET':
         serializer = ResponseSerializer(response, many=False)
         return Response(serializer.data)
+    
+    elif request.method == 'PATCH':
+        serializer = ResponseSerializer(response, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+
+    elif request.method == 'DELETE':
+        response.delete()    
+        return Response("Response Deleted")
 
 @api_view(['GET',])
 def filtered_responses_api(request):
@@ -258,7 +350,7 @@ def filtered_responses_api(request):
         serializer = ResponseSerializer(responses, many=True)
         return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'POST'])
 def clues_api(request):
     try:
         clues = Clue.objects.all()
@@ -268,8 +360,14 @@ def clues_api(request):
     if request.method == 'GET':
         serializer = ClueSerializer(clues, many=True)
         return Response(serializer.data)
+    
+    elif request.method == 'POST':
+        serializer = ClueSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
 
-@api_view(['GET',])
+@api_view(['GET', 'PATCH', 'DELETE'])
 def clue_api(request, pk):
     try:
         clue = Clue.objects.get(id=pk)
@@ -279,6 +377,19 @@ def clue_api(request, pk):
     if request.method == 'GET':
         serializer = ClueSerializer(clue, many=False)
         return Response(serializer.data)
+    
+    elif request.method == 'PATCH':
+        serializer = ClueSerializer(clue, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST )
+
+    elif request.method == 'DELETE':
+        clue.delete()    
+        return Response("Clue Deleted")
+    
 
 @api_view(['GET',])
 def filtered_clues_api(request):
