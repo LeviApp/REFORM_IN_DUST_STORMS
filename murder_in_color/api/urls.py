@@ -1,5 +1,5 @@
 from django.urls import path
-from murder_in_color.api.views import cities_api, city_api, players_api, player_api, filtered_players_api, filtered_places_api, criminals_api, criminal_api, cases_api, case_api, places_api, place_api, witnesses_api, witness_api, filtered_witness_api, responses_api, response_api, filtered_responses_api, clues_api, clue_api, filtered_clues_api, filtered_cases_api
+from murder_in_color.api.views import cities_api, city_api, players_api, player_api, filtered_players_api, filtered_places_api, criminals_api, criminal_api, cases_api, case_api, places_api, place_api, witnesses_api, witness_api, filtered_witness_by_place_api, filtered_witnesses_by_city_api, responses_api, response_api, filtered_responses_api, clues_api, clue_api, filtered_clues_api, filtered_cases_api
 
 app_name = 'murder_in_color'
 urlpatterns = [
@@ -22,7 +22,8 @@ urlpatterns = [
     path(f'filtered-places/', filtered_places_api, name='filtered places'),
     path(f'witnesses/', witnesses_api, name='witnesses'),
     path(f'witnesses/<str:pk>/', witness_api, name='witness'),
-    path(f'filtered-witnesses/', filtered_witness_api, name='filtered witness'),
+    path(f'filtered-witness-by-place/', filtered_witness_by_place_api, name='filtered witness by place'),
+    path(f'filtered-witnesses-by-city/', filtered_witnesses_by_city_api, name='filtered witnesses by city'),
     path(f'responses/', responses_api, name='responses'),
     path(f'responses/<str:pk>/', response_api, name='response'),
     path(f'filtered-responses/', filtered_responses_api, name='filtered responses'),
