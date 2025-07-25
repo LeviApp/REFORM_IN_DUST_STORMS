@@ -8,7 +8,7 @@ from rest_framework import status
 @api_view(['GET', 'POST'])
 def cities_api(request):
     try:
-        cities = City.objects.all()
+        cities = City.objects.all().order_by("id")
     except City.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -48,7 +48,7 @@ def city_api(request, pk):
 @api_view(['GET', 'POST'])
 def players_api(request):
     try:
-        players = Player.objects.all()
+        players = Player.objects.all().order_by("id")
 
     except Player.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
@@ -90,7 +90,7 @@ def player_api(request, pk):
 def filtered_players_api(request):
     value = request.headers['userid']
     try:
-        player = Player.objects.filter(user_id=value)
+        player = Player.objects.filter(user_id=value).order_by("id")
     except Player.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -101,7 +101,7 @@ def filtered_players_api(request):
 @api_view(['GET', 'POST'])
 def criminals_api(request):
     try:
-        criminals = Criminal.objects.all()
+        criminals = Criminal.objects.all().order_by("id")
     except Criminal.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -141,7 +141,7 @@ def criminal_api(request, pk):
 @api_view(['GET', 'POST'])
 def cases_api(request):
     try:
-        cases = Case.objects.all()
+        cases = Case.objects.all().order_by("id")
     except Case.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -182,7 +182,7 @@ def case_api(request, pk):
 def filtered_cases_api(request):
     value = request.headers['userid']
     try:
-        case = Case.objects.filter(user_id=value)
+        case = Case.objects.filter(user_id=value).order_by("id")
     except Case.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -193,7 +193,7 @@ def filtered_cases_api(request):
 @api_view(['GET', 'POST'])
 def places_api(request):
     try:
-        places = Place.objects.all()
+        places = Place.objects.all().order_by("id")
     except Place.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -234,7 +234,7 @@ def place_api(request, pk):
 def filtered_places_api(request):
     value = request.headers['cityid']
     try:
-        places = Place.objects.filter(city=value)
+        places = Place.objects.filter(city=value).order_by("id")
     except Place.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -246,7 +246,7 @@ def filtered_places_api(request):
 @api_view(['GET', 'POST'])
 def witnesses_api(request):
     try:
-        witnesses = Witness.objects.all()
+        witnesses = Witness.objects.all().order_by("id")
     except Witness.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -285,7 +285,7 @@ def witness_api(request, pk):
         return Response("Witness Deleted")
 
 @api_view(['GET',])
-def filtered_witness_api(request):
+def filtered_witness_by_place_api(request):
     value = request.headers['placeid']
 
     try:
@@ -296,11 +296,24 @@ def filtered_witness_api(request):
     if request.method == 'GET':
         serializer = WitnessSerializer(witness, many=True)
         return Response(serializer.data)
+    
+@api_view(['GET',])
+def filtered_witnesses_by_city_api(request):
+    value = request.headers['cityid']
+
+    try:
+        witness = Witness.objects.filter(place=value).order_by("id")
+    except Witness.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = WitnessSerializer(witness, many=True)
+        return Response(serializer.data)
 
 @api_view(['GET', 'POST'])
 def responses_api(request):
     try:
-        responses = Responses.objects.all()
+        responses = Responses.objects.all().order_by("id")
     except Responses.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -353,7 +366,7 @@ def filtered_responses_api(request):
 @api_view(['GET', 'POST'])
 def clues_api(request):
     try:
-        clues = Clue.objects.all()
+        clues = Clue.objects.all().order_by("id")
     except Clue.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -393,7 +406,7 @@ def clue_api(request, pk):
 
 @api_view(['GET',])
 def filtered_clues_api(request):
-    value = request.headers['witnessid']
+    value = request.headers['placeid']
     try:
         clue = Clue.objects.filter(place=value)
     except Clue.DoesNotExist:
