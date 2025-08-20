@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from murder_in_color.models import City, Player, Criminal, Case, Place, Witness, Responses, Clue
+from murder_in_color.models import City, Player, Criminal, PlayerCase, Place, Witness, WitnessResponse, Clue
 
 class CitySerializer(serializers.ModelSerializer):
     class Meta:
@@ -17,9 +17,9 @@ class CriminalSerializer(serializers.ModelSerializer):
         model = Criminal
         fields = ('__all__')
 
-class CaseSerializer(serializers.ModelSerializer):
+class PlayerCaseSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Case
+        model = PlayerCase
         fields = ('__all__')
 
 class PlaceSerializer(serializers.ModelSerializer):
@@ -32,9 +32,9 @@ class WitnessSerializer(serializers.ModelSerializer):
         model = Witness
         fields = ('__all__')
 
-class ResponseSerializer(serializers.ModelSerializer):
+class WitnessResponseSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Responses
+        model = WitnessResponse
         fields = ('__all__')
 
 class ClueSerializer(serializers.ModelSerializer):

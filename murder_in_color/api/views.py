@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from murder_in_color.models import Player, Criminal, City, Place, Witness, Responses, Clue, Case
-from murder_in_color.api.serializers import CitySerializer, PlayerSerializer, CriminalSerializer, CaseSerializer, PlaceSerializer, WitnessSerializer, ResponseSerializer, ClueSerializer
+from murder_in_color.models import Player, Criminal, City, Place, Witness, WitnessResponse, Clue, PlayerCase
+from murder_in_color.api.serializers import CitySerializer, PlayerSerializer, CriminalSerializer, PlayerCaseSerializer, PlaceSerializer, WitnessSerializer, WitnessResponseSerializer, ClueSerializer
 from django.http import HttpResponse
 from rest_framework import status
 
@@ -141,16 +141,16 @@ def criminal_api(request, pk):
 @api_view(['GET', 'POST'])
 def cases_api(request):
     try:
-        cases = Case.objects.all().order_by("id")
-    except Case.DoesNotExist:
+        cases = PlayerCase.objects.all().order_by("id")
+    except PlayerCase.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = CaseSerializer(cases, many=True)
+        serializer = PlayerCaseSerializer(cases, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = CaseSerializer(data=request.data)
+        serializer = PlayerCaseSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
         return Response(serializer.data)
@@ -158,16 +158,16 @@ def cases_api(request):
 @api_view(['GET', 'PATCH', 'DELETE'])
 def case_api(request, pk):
     try:
-        case = Case.objects.get(id=pk)
-    except Case.DoesNotExist:
+        case = PlayerCase.objects.get(id=pk)
+    except PlayerCase.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = CaseSerializer(case, many=False)
+        serializer = PlayerCaseSerializer(case, many=False)
         return Response(serializer.data)
 
     elif request.method == 'PATCH':
-        serializer = CaseSerializer(case, data=request.data, partial=True)
+        serializer = PlayerCaseSerializer(case, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -176,18 +176,18 @@ def case_api(request, pk):
 
     elif request.method == 'DELETE':
         case.delete()    
-        return Response("Case Deleted")
+        return Response("Player Case Deleted")
 
 @api_view(['GET',])
 def filtered_cases_api(request):
     value = request.headers['userid']
     try:
-        case = Case.objects.filter(user_id=value).order_by("id")
-    except Case.DoesNotExist:
+        case = PlayerCase.objects.filter(user_id=value).order_by("id")
+    except PlayerCase.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = CaseSerializer(case, many=True)
+        serializer = PlayerCaseSerializer(case, many=True)
         return Response(serializer.data)
 
 @api_view(['GET', 'POST'])
@@ -313,16 +313,16 @@ def filtered_witnesses_by_city_api(request):
 @api_view(['GET', 'POST'])
 def responses_api(request):
     try:
-        responses = Responses.objects.all().order_by("id")
-    except Responses.DoesNotExist:
+        responses = WitnessResponse.objects.all().order_by("id")
+    except WitnessResponse.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = ResponseSerializer(responses, many=True)
+        serializer = WitnessResponseSerializer(responses, many=True)
         return Response(serializer.data)
     
     elif request.method == 'POST':
-        serializer = ResponseSerializer(data=request.data)
+        serializer = WitnessResponseSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
         return Response(serializer.data)
@@ -330,16 +330,16 @@ def responses_api(request):
 @api_view(['GET', 'PATCH', 'DELETE'])
 def response_api(request, pk):
     try:
-        response = Responses.objects.get(id=pk)
-    except Responses.DoesNotExist:
+        response = WitnessResponse.objects.get(id=pk)
+    except WitnessResponse.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = ResponseSerializer(response, many=False)
+        serializer = WitnessResponseSerializer(response, many=False)
         return Response(serializer.data)
     
     elif request.method == 'PATCH':
-        serializer = ResponseSerializer(response, data=request.data, partial=True)
+        serializer = WitnessResponseSerializer(response, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -355,12 +355,12 @@ def filtered_responses_api(request):
     value = request.headers['witnessid']
 
     try:
-        responses = Responses.objects.filter(witness=value)
-    except Responses.DoesNotExist:
+        responses = WitnessResponse.objects.filter(witness=value)
+    except WitnessResponse.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
-        serializer = ResponseSerializer(responses, many=True)
+        serializer = WitnessResponseSerializer(responses, many=True)
         return Response(serializer.data)
 
 @api_view(['GET', 'POST'])
