@@ -1,5 +1,7 @@
 from django.db import models
 
+# All database tables added for these models
+
 class Criminal(models.Model):
     name = models.CharField(max_length=50)
     gender = models.CharField(max_length=50)
