@@ -1,7 +1,20 @@
 from django.db import models
 
-# Create your models here.
+class Criminal(models.Model):
+    name = models.CharField(max_length=50)
+    gender = models.CharField(max_length=50)
+    race = models.CharField(max_length=50)
+    height = models.CharField(max_length=50)
+    age = models.CharField(max_length=50)
+    weight = models.CharField(max_length=50)
+    hair_color = models.CharField(max_length=50)
+    face_feature = models.CharField(max_length=50)
+    unique_feature = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.name
+    
+    
 class City(models.Model):
     name = models.CharField(max_length=50)
     theme = models.CharField(max_length=50)
@@ -63,22 +76,7 @@ class PlayerCase(models.Model):
 
     def __str__(self):
         return self.general_case.name
-    
-class Criminal(models.Model):
-    name = models.CharField(max_length=50)
-    gender = models.CharField(max_length=50)
-    race = models.CharField(max_length=50)
-    height = models.CharField(max_length=50)
-    age = models.CharField(max_length=50)
-    weight = models.CharField(max_length=50)
-    hair_color = models.CharField(max_length=50)
-    face_feature = models.CharField(max_length=50)
-    unique_feature = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-    
-    
+        
 class DiscoveredFact(models.Model):
     player_case = models.ForeignKey(PlayerCase, on_delete=models.CASCADE)
     fact_type = models.CharField(max_length=50)  # e.g., 'hair_color', 'weapon'
